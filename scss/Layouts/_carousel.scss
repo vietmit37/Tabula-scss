@@ -1,0 +1,30 @@
+.tCarousel {
+  background-image: url("../../images/yellow_top_wave_01.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  position: relative;
+  .row {
+    justify-content: center;
+    align-items: center;
+    .section__title {
+      h3 {
+        @include styleText($fs-2, $fw-2, $color-primary);
+      }
+      p {
+        @include styleText($fs-8, $fw-3, $wp--preset--color--black);
+        max-width: 443px;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    background-image: url(../../images/Violet_top_left_wave.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+  }
+}

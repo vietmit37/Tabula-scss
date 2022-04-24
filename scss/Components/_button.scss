@@ -1,0 +1,19 @@
+.btn-purple {
+  @include styleButton(
+    $fs-10,
+    $wp--preset--color--white,
+    $pd-3,
+    $pd-10,
+    $fs-3,
+    $ls-1
+  );
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 3em $color-primary inset;
+  @include styleText($fs-1, $fw-1, $wp--preset--color--white);
+  transition: all 0.3s ease;
+  &:hover {
+    color: $color-primary;
+    box-shadow: 0 0 0 1px inset;
+  }
+}
