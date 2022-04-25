@@ -192,11 +192,6 @@ a:hover {
   }
 }
 
-.header__responsive--active {
-  margin-left: 20rem !important;
-  transition: all 0.5s ease;
-}
-
 .header__responsive {
   width: 100%;
   position: absolute;
@@ -273,6 +268,21 @@ a:hover {
   height: 50px;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .header__responsive {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header__responsive.header__responsive--active img {
+    display: none;
+  }
+}
+
+.header__responsive--active {
+  margin-left: 20rem !important;
+  transition: all 0.5s ease;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -334,13 +344,6 @@ a:hover {
 }
 
 @media screen and (max-width: 1199.98px) {
-  .header__responsive {
-    opacity: 1;
-    visibility: visible;
-  }
-  .header__responsive.header__responsive--active img {
-    display: none;
-  }
   .header {
     display: flex;
   }
@@ -422,7 +425,7 @@ a:hover {
     margin-top: 2rem;
   }
   .section__title p {
-    font-size: 44px !important;
+    font-size: 42px !important;
     max-width: unset !important;
   }
 }

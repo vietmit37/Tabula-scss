@@ -2,73 +2,6 @@
   margin-left: 20rem !important;
   transition: all 0.5s ease;
 }
-.header__responsive {
-  width: 100%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  opacity: 0;
-  visibility: hidden;
-  background-color: #fff;
-  transition: all 0.5s ease;
-  position: absolute;
-  width: 100%;
-  z-index: 998;
-  .toggle {
-    cursor: pointer;
-    div {
-      width: 25px;
-      height: 1.5px;
-      background-color: $wp--preset--color--black;
-      margin: 8px;
-      transition: all 0.2s ease-in;
-    }
-    &:hover {
-      .line1 {
-        transform: translateY(-4px);
-        background-color: $color-primary;
-      }
-      .line2 {
-        background-color: $color-primary;
-      }
-      .line3 {
-        transform: translateY(4px);
-        background-color: $color-primary;
-      }
-    }
-  }
-  .toggle-active {
-    transition: all 0.3s;
-    &:hover {
-      .line1 {
-        transform: rotate(135deg) translate(7px, 0px);
-        background-color: $color-primary;
-      }
-      .line2 {
-        background-color: $color-primary;
-      }
-      .line3 {
-        transform: rotate(-135deg) translate(1px, -5px);
-        background-color: $color-primary;
-      }
-    }
-    .line1 {
-      transform: rotate(-45deg) translate(-8px, 6px);
-    }
-    .line2 {
-      opacity: 0;
-    }
-    .line3 {
-      transform: rotate(45deg) translate(-8px, -6px);
-    }
-  }
-  img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
 .header {
   position: absolute;
   width: 100%;
@@ -123,15 +56,6 @@
 
 // response
 @include responsive("extra-large-down") {
-  .header__responsive {
-    opacity: 1;
-    visibility: visible;
-    &.header__responsive--active {
-      img {
-        display: none;
-      }
-    }
-  }
   .header {
     display: flex;
     nav {
