@@ -17,6 +17,11 @@ a:hover {
   text-decoration: none;
 }
 
+.form-control:focus {
+  border-color: #abb8c3;
+  box-shadow: 0 0 5px 0 rgba(118, 118, 118, 0.25);
+}
+
 .btn-purple {
   width: 180px;
   background-color: #ffffff;
@@ -35,6 +40,156 @@ a:hover {
 .btn-purple:hover {
   color: #b61984;
   box-shadow: 0 0 0 1px inset;
+}
+
+.btn-white {
+  width: 180px;
+  background-color: #b61984;
+  padding: 20px 20px;
+  border-radius: 1.8rem;
+  letter-spacing: 0.015rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 3em #ffffff inset;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+  color: #ffffff;
+  box-shadow: 0 0 0 1px inset;
+}
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.card .card-img-top {
+  display: block;
+  height: auto;
+  transform: scale3d(1, 1, 1);
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+}
+
+.card .card-img-top:hover {
+  transform: scale3d(1.05, 1.05, 1.05);
+  filter: brightness(1.1);
+}
+
+.card .card-body {
+  text-align: center;
+}
+
+.card .card-body h5 {
+  font-size: 10px;
+  font-weight: 600;
+  color: #b61984;
+  text-transform: uppercase;
+}
+
+.card .card-body h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.card .card-body p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.8;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .card p {
+    font-size: 11px !important;
+  }
+}
+
+.col-xl-5 form {
+  width: 400px;
+  height: 505px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 25px;
+  margin-bottom: 60px;
+  margin-left: 1rem;
+  box-shadow: -10px 10px 27px rgba(0, 0, 0, 0.1);
+}
+
+.col-xl-5 form h3 {
+  font-size: 39px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 3rem;
+  padding-top: 25px;
+}
+
+.col-xl-5 form .contact__row, .col-xl-5 form .contact__language, .col-xl-5 form .contact__confirm {
+  margin-bottom: 25px;
+}
+
+.col-xl-5 form .contact__row--name, .col-xl-5 form .contact__row--email, .col-xl-5 form .contact__language, .col-xl-5 form .contact__confirm {
+  position: relative;
+  width: 50%;
+}
+
+.col-xl-5 form .contact__row--name span, .col-xl-5 form .contact__row--email span, .col-xl-5 form .contact__language span, .col-xl-5 form .contact__confirm span {
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+
+.col-xl-5 form .contact__row--name span i, .col-xl-5 form .contact__row--email span i, .col-xl-5 form .contact__language span i, .col-xl-5 form .contact__confirm span i {
+  color: #b61984;
+}
+
+.col-xl-5 form .contact__language, .col-xl-5 form .contact__confirm {
+  width: 100%;
+}
+
+.col-xl-5 form input, .col-xl-5 form select, .col-xl-5 form textarea {
+  padding: 0 2rem;
+  font-size: 11px;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.col-xl-5 form textarea {
+  padding: 4px 2rem;
+  margin-bottom: 3rem;
+}
+
+.col-xl-5 form .btn-send {
+  width: 150px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 991.98px) {
+  form {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  form {
+    margin-left: 0 !important;
+  }
 }
 
 .header__responsive--active {
@@ -137,6 +292,7 @@ a:hover {
 .header nav .header__logo img {
   width: 80px;
   height: 80px;
+  cursor: pointer;
 }
 
 .header nav .nav__right, .header nav .nav__right .nav__links, .header nav .nav__right .header__social {
@@ -225,22 +381,29 @@ a:hover {
   position: relative;
 }
 
-.tCarousel .row {
-  justify-content: center;
+.tCarousel .container {
+  padding: 50px 0;
+}
+
+.tCarousel .container .row {
   align-items: center;
 }
 
-.tCarousel .row .section__title h3 {
+.tCarousel .container .row .section__title h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #b61984;
 }
 
-.tCarousel .row .section__title p {
+.tCarousel .container .row .section__title p {
   font-size: 50px;
   font-weight: 700;
   color: #000000;
   max-width: 443px;
+}
+
+.tCarousel .container .row .carousel__img img {
+  width: 100%;
 }
 
 .tCarousel::before {
@@ -254,7 +417,174 @@ a:hover {
   background-position: bottom;
 }
 
-.portfolio .row .col-md-3 {
-  padding-bottom: 25px;
+@media screen and (max-width: 991.98px) {
+  .section__title {
+    margin-top: 2rem;
+  }
+  .section__title p {
+    font-size: 44px !important;
+    max-width: unset !important;
+  }
+}
+
+.portfolio {
+  background-color: #dcd1f0;
+  position: relative;
+}
+
+.portfolio .row .col-lg-3, .portfolio .row .col-md-6 {
+  padding-bottom: 50px;
+}
+
+.portfolio::before {
+  content: "";
+  background-image: url(../../images/Wave_White_bottom_right_shape_01.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+}
+
+.contact {
+  margin-top: 7rem;
+  position: relative;
+}
+
+.contact .row {
+  align-items: center;
+  margin: 0 6rem;
+}
+
+.contact .row .col-xl-7 img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.contact::before {
+  content: "";
+  background-image: url(../../images/accent_bottom_wave_01.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .row {
+    margin: 0 !important;
+    row-gap: 1rem;
+  }
+  .row .col-xl-7 img {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .row .col-xl-7 img {
+    height: auto;
+  }
+}
+
+.footer {
+  position: relative;
+  background-image: url(/images/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.footer .row {
+  padding-top: 5rem;
+}
+
+.footer .row .col-lg-3 h3, .footer .portfolio .row .col-md-6 h3, .portfolio .footer .row .col-md-6 h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.footer .row .col-lg-3 ul li, .footer .portfolio .row .col-md-6 ul li, .portfolio .footer .row .col-md-6 ul li {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.footer .row .col-lg-3 ul li span, .footer .portfolio .row .col-md-6 ul li span, .portfolio .footer .row .col-md-6 ul li span {
+  padding-right: 8px;
+}
+
+.footer .row .col-lg-3 ul li:hover, .footer .portfolio .row .col-md-6 ul li:hover, .portfolio .footer .row .col-md-6 ul li:hover {
+  opacity: 0.8;
+}
+
+.footer .row .col-lg-3 .footer__social a, .footer .portfolio .row .col-md-6 .footer__social a, .portfolio .footer .row .col-md-6 .footer__social a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding-right: 8px;
+  transition: all 300ms ease-in-out;
+}
+
+.footer .row .col-lg-3 .footer__social a:hover, .footer .portfolio .row .col-md-6 .footer__social a:hover, .portfolio .footer .row .col-md-6 .footer__social a:hover {
+  color: #000000;
+}
+
+.footer .row .col-lg-3 .footer__content li:first-child, .footer .portfolio .row .col-md-6 .footer__content li:first-child, .portfolio .footer .row .col-md-6 .footer__content li:first-child {
+  padding-top: 0;
+}
+
+.footer .row .col-lg-3 .footer__content li, .footer .portfolio .row .col-md-6 .footer__content li, .portfolio .footer .row .col-md-6 .footer__content li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.8em 0;
+}
+
+.footer .row .col-lg-3 input, .footer .portfolio .row .col-md-6 input, .portfolio .footer .row .col-md-6 input, .footer .row .col-lg-3 .col-xl-5 form select, .col-xl-5 form .footer .row .col-lg-3 select, .footer .portfolio .row .col-md-6 .col-xl-5 form select, .col-xl-5 form .footer .portfolio .row .col-md-6 select, .portfolio .footer .row .col-md-6 .col-xl-5 form select, .col-xl-5 form .portfolio .footer .row .col-md-6 select, .footer .row .col-lg-3 .col-xl-5 form textarea, .col-xl-5 form .footer .row .col-lg-3 textarea, .footer .portfolio .row .col-md-6 .col-xl-5 form textarea, .col-xl-5 form .footer .portfolio .row .col-md-6 textarea, .portfolio .footer .row .col-md-6 .col-xl-5 form textarea, .col-xl-5 form .portfolio .footer .row .col-md-6 textarea {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  border-radius: 50px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 500ms ease;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer .row .col-lg-3 input:focus, .footer .portfolio .row .col-md-6 input:focus, .portfolio .footer .row .col-md-6 input:focus, .footer .row .col-lg-3 .col-xl-5 form select:focus, .col-xl-5 form .footer .row .col-lg-3 select:focus, .footer .portfolio .row .col-md-6 .col-xl-5 form select:focus, .col-xl-5 form .footer .portfolio .row .col-md-6 select:focus, .portfolio .footer .row .col-md-6 .col-xl-5 form select:focus, .col-xl-5 form .portfolio .footer .row .col-md-6 select:focus, .footer .row .col-lg-3 .col-xl-5 form textarea:focus, .col-xl-5 form .footer .row .col-lg-3 textarea:focus, .footer .portfolio .row .col-md-6 .col-xl-5 form textarea:focus, .col-xl-5 form .footer .portfolio .row .col-md-6 textarea:focus, .portfolio .footer .row .col-md-6 .col-xl-5 form textarea:focus, .col-xl-5 form .portfolio .footer .row .col-md-6 textarea:focus {
+  border: 1px solid white;
+  transition: all 500ms ease;
+}
+
+.footer .row .col-lg-3 ::placeholder, .footer .portfolio .row .col-md-6 ::placeholder, .portfolio .footer .row .col-md-6 ::placeholder {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 991.98px) {
+  .footer {
+    height: 700px !important;
+  }
+  .footer .row .footer__content li:first-child {
+    padding-top: 0;
+  }
+  .footer .row .footer__content li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.4em 0 !important;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .footer {
+    height: 80rem !important;
+  }
+  .footer .col-lg-3, .footer .portfolio .row .col-md-6, .portfolio .row .footer .col-md-6 {
+    margin-bottom: 3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

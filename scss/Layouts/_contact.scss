@@ -1,0 +1,46 @@
+.contact {
+  margin-top: 7rem;
+  position: relative;
+  .row {
+    align-items: center;
+    margin: 0 6rem;
+    .col-xl-7 {
+      img {
+        object-fit: cover;
+        max-width: 100%;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    background-image: url(../../images/accent_bottom_wave_01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Responsive
+@include responsive("extra-large-down") {
+  .row {
+    margin: 0 !important;
+    row-gap: 1rem;
+    .col-xl-7 {
+      img {
+        height: 500px;
+      }
+    }
+  }
+}
+@include responsive("small-down") {
+  .row {
+    .col-xl-7 {
+      img {
+        height: auto;
+      }
+    }
+  }
+}

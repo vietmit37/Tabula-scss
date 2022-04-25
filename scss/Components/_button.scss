@@ -17,3 +17,17 @@
     box-shadow: 0 0 0 1px inset;
   }
 }
+.btn-white {
+  @include styleButton($fs-10, $color-primary, $pd-10, $pd-10, $fs-3, $ls-1);
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 3em $wp--preset--color--white inset;
+  @include styleText($fs-1, $fw-2, $wp--preset--color--black);
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $wp--preset--color--white;
+    box-shadow: 0 0 0 1px inset;
+  }
+}

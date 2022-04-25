@@ -1,0 +1,92 @@
+.footer {
+  position: relative;
+  background-image: url(/images/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  .row {
+    padding-top: 5rem;
+    .col-lg-3 {
+      h3 {
+        @include styleText($fs-5, $fw-3, $wp--preset--color--white);
+        margin-bottom: 2rem;
+      }
+      ul {
+        li {
+          @include styleText($fs-1, $fw-1, $wp--preset--color--white);
+          margin-bottom: $mg-0;
+          cursor: pointer;
+          span {
+            padding-right: $pd-6;
+          }
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      .footer__social {
+        a {
+          @include styleText($fs-2, $fw-3, $wp--preset--color--white);
+          padding-right: $pd-6;
+          transition: all 300ms ease-in-out;
+          &:hover {
+            color: $wp--preset--color--black;
+          }
+        }
+      }
+      .footer__content {
+        li:first-child {
+          padding-top: 0;
+        }
+        li {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 0.8em 0;
+        }
+      }
+      input {
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        outline: none;
+        border-radius: 50px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 500ms ease;
+        margin-bottom: 1rem;
+        color: $wp--preset--color--white;
+        &:focus {
+          border: 1px solid rgba(255, 255, 255, 1);
+          transition: all 500ms ease;
+        }
+      }
+      ::placeholder {
+        color: $wp--preset--color--white;
+      }
+    }
+  }
+}
+
+// responsive
+@include responsive("large-down") {
+  .footer {
+    height: 700px !important;
+    .row {
+      .footer__content {
+        li:first-child {
+          padding-top: 0;
+        }
+        li {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 0.4em 0 !important;
+        }
+      }
+    }
+  }
+}
+@include responsive("small-down") {
+  .footer {
+    height: 80rem !important;
+    .col-lg-3 {
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -13,3 +13,7 @@ ul {
 a:hover {
   text-decoration: none;
 }
+.form-control:focus {
+  border-color: $wp--preset--color--cyan-bluish-gray;
+  box-shadow: 0 0 5px 0 rgba(118, 118, 118, 0.25);
+}
