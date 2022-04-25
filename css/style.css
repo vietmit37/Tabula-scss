@@ -574,10 +574,9 @@ a:hover {
     height: 700px !important;
   }
   .footer .row .footer__content li:first-child {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
   .footer .row .footer__content li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.4em 0 !important;
   }
 }
